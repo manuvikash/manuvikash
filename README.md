@@ -9,7 +9,7 @@ Always experimenting, always learning, usually with ☕ and Lo-Fi in the backgro
 
 ### ⚡ What I’m up to
 - ✨ Hacking on side projects in **AI + full-stack dev**  
-- 🌍 Moving from India → US this fall  
+- 🌍 Moved from India → US this fall  
 - 🏋️ Learning to stick to a gym routine (harder than debugging 😅)  
 
 ---
