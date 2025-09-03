@@ -2,8 +2,8 @@
 
 💻 Software tinkerer | 🌱 Lifelong learner | 🎓 MSCS @ SJSU (Fall '25)  
 
-I love building things that blend **AI, networks, and creativity** — from carpooling apps to budget planners to wearables.  
-Always experimenting, always learning, usually with ☕ and music in the background.  
+I love building things that blend **web, AI and creativity** — from carpooling apps to budget planners to wearables.  
+Always experimenting, always learning, usually with ☕ and Lo-Fi in the background.  
 
 ---
 
@@ -14,21 +14,11 @@ Always experimenting, always learning, usually with ☕ and music in the backgro
 
 ---
 
-### 🛠️ Tech Playground
-`Python` · `C++` · `React` · `Flutter` · `Node.js` · `Docker`  
+### 🛠️ Tech Playground  
 
----
-
-### 📊 My GitHub
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=manuvikash&show_icons=true&theme=tokyonight" height="180"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manuvikash&layout=compact&theme=tokyonight" height="180"/>
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=python,js,ts,react,nextjs,java,dart,sqlite,nodejs" />
 </p>
-
----
-
-### 🌐 Connect
-[🌎 Website](https://manuvikash.cc) · [💼 LinkedIn](https://linkedin.com/in/manuvikash) · [✉️ Email](mailto:manuvikash.saravanakumar@gmail.com)  
 
 ---
 ✨ *“Always building, always learning.”*
