@@ -1,4 +1,4 @@
-# Hey 👋 I’m Manu — <!--weather-start-->I'm from San Jose, CA — it's 72°F now. Have a good Thursday!<!--weather-end-->
+# Hey 👋 I’m Manu — \1I'm from San Jose, CA — it's 73°F now. Have a good Thursday!\3
 
 💻 Software tinkerer | 🌱 Lifelong learner | 🎓 MSCS @ SJSU (Fall '25)  
 
