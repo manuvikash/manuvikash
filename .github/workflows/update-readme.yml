@@ -1,0 +1,114 @@
+name: Update README
+
+on:
+  schedule:
+    # Runs daily at 15:00 UTC (08:00 during PDT / 07:00 during PST in America/Los_Angeles)
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      CITY: "San Jose, CA, US"   # Geocoded to coordinates automatically
+      LAT: ""                    # Leave blank when CITY is set
+      LON: ""
+      TIMEZONE: "America/Los_Angeles"
+      TEMP_UNIT: "F"             # Change to "C" if you prefer Celsius
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update README with inline day & temperature
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os, re, json, urllib.request, urllib.parse
+          from datetime import datetime
+          try:
+              from zoneinfo import ZoneInfo
+          except Exception:
+              ZoneInfo = None
+
+          city = os.getenv("CITY", "").strip()
+          lat  = os.getenv("LAT", "").strip()
+          lon  = os.getenv("LON", "").strip()
+          tz   = os.getenv("TIMEZONE", "UTC").strip()
+          unit = os.getenv("TEMP_UNIT", "F").strip().upper()
+
+          def fetch(url):
+              with urllib.request.urlopen(url, timeout=30) as r:
+                  return json.loads(r.read().decode("utf-8"))
+
+          # Resolve coordinates (prefer explicit LAT/LON; else geocode CITY)
+          if lat and lon:
+              latitude = float(lat); longitude = float(lon)
+          elif city:
+              geo_url = "https://geocoding-api.open-meteo.com/v1/search?name={}&count=1&language=en&format=json".format(
+                  urllib.parse.quote(city)
+              )
+              geo = fetch(geo_url)
+              if not geo.get("results"):
+                  raise SystemExit(f"Could not geocode CITY='{city}'.")
+              res = geo["results"][0]
+              latitude = res["latitude"]; longitude = res["longitude"]
+          else:
+              raise SystemExit("Set either CITY or LAT/LON via workflow env.")
+
+          # Get current weather (Open-Meteo, no API key required)
+          wurl = f"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current_weather=true"
+          w = fetch(wurl)
+          cw = w.get("current_weather") or w.get("current") or {}
+          temp_c = cw.get("temperature") or cw.get("temperature_2m")
+          if temp_c is None:
+              raise SystemExit("Could not read current temperature.")
+
+          # Convert temperature unit
+          if unit == "F":
+              temp = round(temp_c * 9/5 + 32)
+              symbol = "°F"
+          else:
+              temp = round(temp_c)
+              symbol = "°C"
+
+          # Local day-of-week
+          now = datetime.utcnow()
+          if ZoneInfo is not None and tz:
+              try:
+                  now = now.replace(tzinfo=ZoneInfo("UTC")).astimezone(ZoneInfo(tz))
+              except Exception:
+                  pass
+
+          # Your desired inline sentence
+          line = f"I'm from San Jose, CA — it's {temp}{symbol} now. Have a good {now.strftime('%A')}!"
+
+          # Replace strictly between markers, inline (no extra newlines)
+          with open("README.md", "r", encoding="utf-8") as f:
+              content = f.read()
+
+          pattern = re.compile(r"(<!--weather-start-->)(.*?)(<!--weather-end-->)", re.S)
+          new_content = pattern.sub(rf"\\1{line}\\3", content)
+
+          if new_content != content:
+              with open("README.md", "w", encoding="utf-8") as f:
+                  f.write(new_content)
+              print("README updated.")
+          else:
+              print("No change detected.")
+          PY
+
+      - name: Commit & push (if changed)
+        shell: bash
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: update README header with temp & day [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
