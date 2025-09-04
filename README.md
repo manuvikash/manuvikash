@@ -1,6 +1,6 @@
 # Hey 👋 I’m Manu
 
-<!--weather-start-->This needs to update<!--weather-end-->
+<!--weather-start-->I live in San Jose, CA — it's 73°F now. Have a good Thursday!<!--weather-end-->
 
 ---
 
