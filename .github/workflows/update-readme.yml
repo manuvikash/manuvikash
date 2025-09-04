@@ -13,9 +13,9 @@ jobs:
   update:
     runs-on: ubuntu-latest
     env:
-      CITY: "San Jose, CA, US"   # Geocoded to coordinates automatically
-      LAT: ""                    # Leave blank when CITY is set
-      LON: ""
+      CITY: ""                     
+      LAT: "37.3387"              
+      LON: "-121.8853"
       TIMEZONE: "America/Los_Angeles"
       TEMP_UNIT: "F"             # Change to "C" if you prefer Celsius
     steps:
