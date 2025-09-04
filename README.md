@@ -2,6 +2,8 @@
 
 <!--weather-start-->This needs to update<!--weather-end-->
 
+---
+
 💻 Software tinkerer | 🌱 Lifelong learner | 🎓 MSCS @ SJSU (Fall '25)  
 
 I love building things that blend **web, AI and creativity** — from carpooling apps to budget planners to wearables.  
