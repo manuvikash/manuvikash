@@ -82,15 +82,14 @@ jobs:
               except Exception:
                   pass
 
-          # Your desired inline sentence
-          line = f"I'm from San Jose, CA — it's {temp}{symbol} now. Have a good {now.strftime('%A')}!"
+          line = f"I live in San Jose, CA — it's {temp}{symbol} now. Have a good {now.strftime('%A')}!"
 
           # Replace strictly between markers, inline (no extra newlines)
           with open("README.md", "r", encoding="utf-8") as f:
               content = f.read()
 
           pattern = re.compile(r"(<!--weather-start-->)(.*?)(<!--weather-end-->)", re.S)
-          new_content = pattern.sub(rf"\\1{line}\\3", content)
+          new_content = pattern.sub(lambda m: f"{m.group(1)}{line}{m.group(3)}", content)
 
           if new_content != content:
               with open("README.md", "w", encoding="utf-8") as f:
