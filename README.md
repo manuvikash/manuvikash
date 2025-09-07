@@ -1,4 +1,4 @@
-# Hey 👋 I’m Manu
+# Hey 👋 I’m Manuvikash
 
 <!--weather-start-->I live in San Jose, CA — it's 65°F now. Have a good Sunday!<!--weather-end-->
 
