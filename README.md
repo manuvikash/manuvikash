@@ -1,6 +1,6 @@
 # Hey 👋 I’m Manu
 
-<!--weather-start-->I live in San Jose, CA — it's 61°F now. Have a good Saturday!<!--weather-end-->
+<!--weather-start-->I live in San Jose, CA — it's 65°F now. Have a good Sunday!<!--weather-end-->
 
 ---
 
