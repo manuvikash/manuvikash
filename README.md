@@ -6,7 +6,7 @@
 
 💻 Software engineer | Graduate CS @ SJSU
 
-I build random random at random times for random reasons
+**I build random things at random times for random reasons**
 
 ### 🛠️ Current Tool Shed
 
