@@ -4,25 +4,23 @@
 
 ---
 
-💻 Software tinkerer | 🌱 Lifelong learner | 🎓 MSCS @ SJSU (Fall '25)  
+💻 Software engineer | Graduate CS @ SJSU
 
-I love building things that blend **web, AI and creativity** — from carpooling apps to budget planners to wearables.  
-Always experimenting, always learning, usually with ☕ and Lo-Fi in the background.  
+I build random random at random times for random reasons
 
----
-
-### ⚡ What I’m up to
-- ✨ Hacking on side projects in **AI + full-stack dev**  
-- 🌍 Moved from India → US this fall  
-- 🏋️ Learning to stick to a gym routine (harder than debugging 😅)  
-
----
-
-### 🛠️ Tech Playground  
+### 🛠️ Current Tool Shed
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=python,js,ts,react,nextjs,java,dart,sqlite,nodejs" />
+  <img src="https://skillicons.dev/icons?i=
+shell,ubuntu,vim,latex,
+python,java,js,ts,lua,sql,
+nodejs,bun,npm,
+sqlite,postgres,redis,
+aws,docker,terraform,grafana,
+react,nextjs,flutter,androidstudio,
+arduino,unity" />
+  
 </p>
 
 ---
-✨ *“Always building, always learning.”*
+*“To get in touch - [Email Me](mailto:manuvikashs@gmail.com)”*
