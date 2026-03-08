@@ -1,6 +1,6 @@
 # Hey 👋 I’m Manuvikash
 
-<!--weather-start-->I live in San Jose, CA — it's 47°F now. Have a good Saturday!<!--weather-end-->
+<!--weather-start-->I live in San Jose, CA — it's 52°F now. Have a good Sunday!<!--weather-end-->
 
 ---
 
