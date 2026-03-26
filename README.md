@@ -1,6 +1,6 @@
 # Hey 👋 I’m Manuvikash
 
-<!--weather-start-->I live in San Jose, CA — it's 55°F now. Have a good Wednesday!<!--weather-end-->
+<!--weather-start-->I live in San Jose, CA — it's 54°F now. Have a good Thursday!<!--weather-end-->
 
 ---
 
