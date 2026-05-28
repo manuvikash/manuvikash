@@ -4,7 +4,7 @@
 
 ---
 
-💻 Software engineer | Graduate CS @ SJSU
+💻 AI Engineer @ Arize AI | Graduate CS @ SJSU
 
 **I build random things at random times for random reasons**
 
